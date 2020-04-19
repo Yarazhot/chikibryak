@@ -1,0 +1,10 @@
+C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\bin\Debug\Dark Souls Builder.exe.config
+C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\bin\Debug\Dark Souls Builder.exe
+C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\bin\Debug\Dark Souls Builder.pdb
+C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\obj\Debug\Dark Souls Builder.csprojAssemblyReference.cache
+C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\obj\Debug\Dark_Souls_Builder.Form1.resources
+C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\obj\Debug\Dark_Souls_Builder.Properties.Resources.resources
+C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\obj\Debug\Dark Souls Builder.csproj.GenerateResource.cache
+C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\obj\Debug\Dark Souls Builder.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\obj\Debug\Dark Souls Builder.exe
+C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\obj\Debug\Dark Souls Builder.pdb
