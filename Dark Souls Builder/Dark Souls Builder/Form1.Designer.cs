@@ -36,6 +36,11 @@
             this.PropTB = new System.Windows.Forms.TextBox();
             this.ConfrimBT = new System.Windows.Forms.Button();
             this.RemoveBT = new System.Windows.Forms.Button();
+            this.OpenFileD = new System.Windows.Forms.OpenFileDialog();
+            this.SaveFileD = new System.Windows.Forms.SaveFileDialog();
+            this.SerializersCB = new System.Windows.Forms.ComboBox();
+            this.LoadBT = new System.Windows.Forms.Button();
+            this.SaveBT = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ObjectsLB
@@ -44,9 +49,9 @@
             this.ObjectsLB.FormattingEnabled = true;
             this.ObjectsLB.ItemHeight = 20;
             this.ObjectsLB.Location = new System.Drawing.Point(10, 10);
-            this.ObjectsLB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ObjectsLB.Margin = new System.Windows.Forms.Padding(2);
             this.ObjectsLB.Name = "ObjectsLB";
-            this.ObjectsLB.Size = new System.Drawing.Size(212, 264);
+            this.ObjectsLB.Size = new System.Drawing.Size(212, 224);
             this.ObjectsLB.TabIndex = 1;
             this.ObjectsLB.SelectedIndexChanged += new System.EventHandler(this.ObjectsLB_SelectedIndexChanged);
             // 
@@ -55,7 +60,7 @@
             this.ClassesCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ClassesCB.FormattingEnabled = true;
             this.ClassesCB.Location = new System.Drawing.Point(226, 11);
-            this.ClassesCB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ClassesCB.Margin = new System.Windows.Forms.Padding(2);
             this.ClassesCB.Name = "ClassesCB";
             this.ClassesCB.Size = new System.Drawing.Size(228, 21);
             this.ClassesCB.TabIndex = 2;
@@ -63,7 +68,7 @@
             // CreateBT
             // 
             this.CreateBT.Location = new System.Drawing.Point(226, 46);
-            this.CreateBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CreateBT.Margin = new System.Windows.Forms.Padding(2);
             this.CreateBT.Name = "CreateBT";
             this.CreateBT.Size = new System.Drawing.Size(107, 33);
             this.CreateBT.TabIndex = 3;
@@ -77,9 +82,9 @@
             this.InfoLB.FormattingEnabled = true;
             this.InfoLB.ItemHeight = 20;
             this.InfoLB.Location = new System.Drawing.Point(457, 10);
-            this.InfoLB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.InfoLB.Margin = new System.Windows.Forms.Padding(2);
             this.InfoLB.Name = "InfoLB";
-            this.InfoLB.Size = new System.Drawing.Size(212, 264);
+            this.InfoLB.Size = new System.Drawing.Size(212, 224);
             this.InfoLB.TabIndex = 5;
             this.InfoLB.SelectedIndexChanged += new System.EventHandler(this.InfoLB_SelectedIndexChanged);
             // 
@@ -88,7 +93,7 @@
             this.PropertiesCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PropertiesCB.FormattingEnabled = true;
             this.PropertiesCB.Location = new System.Drawing.Point(672, 11);
-            this.PropertiesCB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PropertiesCB.Margin = new System.Windows.Forms.Padding(2);
             this.PropertiesCB.Name = "PropertiesCB";
             this.PropertiesCB.Size = new System.Drawing.Size(228, 21);
             this.PropertiesCB.TabIndex = 6;
@@ -113,7 +118,7 @@
             // RemoveBT
             // 
             this.RemoveBT.Location = new System.Drawing.Point(346, 46);
-            this.RemoveBT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RemoveBT.Margin = new System.Windows.Forms.Padding(2);
             this.RemoveBT.Name = "RemoveBT";
             this.RemoveBT.Size = new System.Drawing.Size(107, 33);
             this.RemoveBT.TabIndex = 9;
@@ -121,11 +126,50 @@
             this.RemoveBT.UseVisualStyleBackColor = true;
             this.RemoveBT.Click += new System.EventHandler(this.RemoveBT_Click);
             // 
+            // OpenFileD
+            // 
+            this.OpenFileD.FileName = "openFileDialog1";
+            // 
+            // SerializersCB
+            // 
+            this.SerializersCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SerializersCB.FormattingEnabled = true;
+            this.SerializersCB.Location = new System.Drawing.Point(226, 119);
+            this.SerializersCB.Margin = new System.Windows.Forms.Padding(2);
+            this.SerializersCB.Name = "SerializersCB";
+            this.SerializersCB.Size = new System.Drawing.Size(228, 21);
+            this.SerializersCB.TabIndex = 11;
+            // 
+            // LoadBT
+            // 
+            this.LoadBT.Location = new System.Drawing.Point(226, 158);
+            this.LoadBT.Margin = new System.Windows.Forms.Padding(2);
+            this.LoadBT.Name = "LoadBT";
+            this.LoadBT.Size = new System.Drawing.Size(107, 33);
+            this.LoadBT.TabIndex = 12;
+            this.LoadBT.Text = "Load";
+            this.LoadBT.UseVisualStyleBackColor = true;
+            this.LoadBT.Click += new System.EventHandler(this.LoadBT_Click);
+            // 
+            // SaveBT
+            // 
+            this.SaveBT.Location = new System.Drawing.Point(346, 158);
+            this.SaveBT.Margin = new System.Windows.Forms.Padding(2);
+            this.SaveBT.Name = "SaveBT";
+            this.SaveBT.Size = new System.Drawing.Size(107, 33);
+            this.SaveBT.TabIndex = 13;
+            this.SaveBT.Text = "Save";
+            this.SaveBT.UseVisualStyleBackColor = true;
+            this.SaveBT.Click += new System.EventHandler(this.SaveBT_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(909, 284);
+            this.Controls.Add(this.SaveBT);
+            this.Controls.Add(this.LoadBT);
+            this.Controls.Add(this.SerializersCB);
             this.Controls.Add(this.RemoveBT);
             this.Controls.Add(this.ConfrimBT);
             this.Controls.Add(this.PropTB);
@@ -135,9 +179,9 @@
             this.Controls.Add(this.ClassesCB);
             this.Controls.Add(this.ObjectsLB);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
-            this.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.Padding = new System.Windows.Forms.Padding(8);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -154,6 +198,11 @@
         private System.Windows.Forms.TextBox PropTB;
         private System.Windows.Forms.Button ConfrimBT;
         private System.Windows.Forms.Button RemoveBT;
+        private System.Windows.Forms.OpenFileDialog OpenFileD;
+        private System.Windows.Forms.SaveFileDialog SaveFileD;
+        private System.Windows.Forms.ComboBox SerializersCB;
+        private System.Windows.Forms.Button LoadBT;
+        private System.Windows.Forms.Button SaveBT;
     }
 }
 

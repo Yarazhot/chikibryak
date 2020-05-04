@@ -14,7 +14,7 @@ namespace Dark_Souls_Builder
 {
     public partial class Form1 : Form
     {
-        private Class_Manager.Class__Manager class_manager;
+        private Class_Manager.Class__Manager class_manager; 
         public Form1()
         {
             InitializeComponent();
@@ -24,6 +24,12 @@ namespace Dark_Souls_Builder
             for (int i = 0; i < buf.Length; i++)
             {
                 ClassesCB.Items.Add(buf[i]);
+            }
+            buf = class_manager.GetSerialisers();
+            SerializersCB.Items.Clear();
+            for (int i = 0; i < buf.Length; i++)
+            {
+                SerializersCB.Items.Add(buf[i]);
             }
             ConfrimBT.Enabled = false;
             PropTB.Enabled = false;
@@ -127,6 +133,33 @@ namespace Dark_Souls_Builder
                 class_manager.DeleteObj();
                 UpdateObjs();
             }
+        }
+
+        private void LoadBT_Click(object sender, EventArgs e)
+        {
+            if (OpenFileD.ShowDialog() == DialogResult.Cancel)
+                return;
+            if (SerializersCB.Text == "")
+            {
+                MessageBox.Show("Choose serializer pls!", "Message",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            class_manager.Load(OpenFileD.FileName, SerializersCB.Text);
+            UpdateObjs();
+        }
+
+        private void SaveBT_Click(object sender, EventArgs e)
+        {
+            if (SaveFileD.ShowDialog() == DialogResult.Cancel)
+                return;
+            if (SerializersCB.Text == "" || ObjectsLB.Items.Count == 0)
+            {
+                MessageBox.Show("Choose serializer and create at least one object pls!", "Message",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            class_manager.Save(SaveFileD.FileName, SerializersCB.Text);
         }
     }
 }

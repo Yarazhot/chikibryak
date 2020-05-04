@@ -8,3 +8,22 @@ C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\obj\Debug\Dark 
 C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\obj\Debug\Dark Souls Builder.csproj.CoreCompileInputs.cache
 C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\obj\Debug\Dark Souls Builder.exe
 C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\obj\Debug\Dark Souls Builder.pdb
+C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\obj\Debug\Dark Souls Builder.csproj.CopyComplete
+C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\bin\Debug\System.Buffers.dll
+C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\bin\Debug\System.Memory.dll
+C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\bin\Debug\System.Text.Json.dll
+C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\bin\Debug\System.ValueTuple.dll
+C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\bin\Debug\System.Buffers.xml
+C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\bin\Debug\System.Memory.xml
+C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\bin\Debug\System.Text.Json.xml
+C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\bin\Debug\System.ValueTuple.xml

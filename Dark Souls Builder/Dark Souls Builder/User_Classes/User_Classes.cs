@@ -6,19 +6,8 @@ using System.Threading.Tasks;
 
 namespace Dark_Souls_Builder.User_Classes
 {
-    struct s_specifications
-    {
-        public int vigour;
-        public int agility;
-        public int magic;
-    }
 
-    struct s_ammo
-    {
-        public int damage;
-        public int amount;
-    }
-
+    [Serializable]
     abstract class Weapon
     {
         public string name { set; get; }
@@ -30,19 +19,21 @@ namespace Dark_Souls_Builder.User_Classes
         public Weapon()
         {
             name = "empty";
-            damage = 0;
+            /*damage = 0;
             stamina_consumption = 0;
             vigour_req = 0;
             agility_req = 0;
-            magic_req = 0;
+            magic_req = 0;*/
         }
     }
 
-    class Melee: Weapon
+    [Serializable]
+    class Melee : Weapon
     {
         public int crit_factor { set; get; }
         public int crit_chance { set; get; }
-        public Melee() : base()
+
+        public Melee()// : base()
         {
             name = "Melee";
             crit_factor = 0;
@@ -50,11 +41,12 @@ namespace Dark_Souls_Builder.User_Classes
         }
     }
 
-    class Rifle: Weapon
+    [Serializable]
+    class Rifle : Weapon
     {
         public int range { get; set; }
         public int ammo_damage { get; set; }
-        public Rifle() : base()
+        public Rifle()// : base()
         {
             name = "Rifle";
             range = 0;
@@ -62,11 +54,12 @@ namespace Dark_Souls_Builder.User_Classes
         }
     }
 
-    class Magic_Сatalyst: Weapon
+    [Serializable]
+    class Magic_Сatalyst : Weapon
     {
         public int mana_consumption { set; get; }
         public int range { get; set; }
-        public Magic_Сatalyst() : base()
+        public Magic_Сatalyst()// : base()
         {
             name = "Magic_Сatalyst";
             range = 0;
@@ -74,6 +67,7 @@ namespace Dark_Souls_Builder.User_Classes
         }
     }
 
+    [Serializable]
     abstract class Character
     {
         public string name { get; set; }
@@ -87,7 +81,8 @@ namespace Dark_Souls_Builder.User_Classes
         }
     }
 
-    class Simple_NPC: Character
+    [Serializable]
+    class Simple_NPC : Character
     {
         public int damage { get; set; }
         public Simple_NPC() : base()
@@ -98,13 +93,14 @@ namespace Dark_Souls_Builder.User_Classes
 
     }
 
-    class Player_Like_NPC: Character
+    [Serializable]
+    class Player_Like_NPC : Character
     {
         public int armor { get; set; }
         public Weapon weapon { get; set; }
         public int stamina { get; set; }
         public int mana { get; set; }
-        public Player_Like_NPC(): base()
+        public Player_Like_NPC() : base()
         {
             name = "Player_Like_NPC";
             armor = 0;
@@ -114,7 +110,8 @@ namespace Dark_Souls_Builder.User_Classes
         }
     }
 
-    class Player: Player_Like_NPC
+    [Serializable]
+    class Player : Player_Like_NPC
     {
         public int vigour { get; set; }
         public int agility { get; set; }
@@ -128,7 +125,8 @@ namespace Dark_Souls_Builder.User_Classes
         }
     }
 
-    class Quest_Player_Like_NPC: Player_Like_NPC
+    [Serializable]
+    class Quest_Player_Like_NPC : Player_Like_NPC
     {
         public string dialogs { get; set; }
         public Quest_Player_Like_NPC() : base()
@@ -138,7 +136,8 @@ namespace Dark_Souls_Builder.User_Classes
         }
     }
 
-    class Quest_SimpleNPC: Simple_NPC
+    [Serializable]
+    class Quest_SimpleNPC : Simple_NPC
     {
         public string dialogs { get; set; }
         public Quest_SimpleNPC() : base()

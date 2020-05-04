@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Reflection;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Dark_Souls_Builder.User_Classes;
+using Dark_Souls_Builder.Serializers;
 
 namespace Dark_Souls_Builder.Class_Manager
 {
@@ -170,8 +171,7 @@ namespace Dark_Souls_Builder.Class_Manager
             Type type = objects[edit_obj_num].GetType();
             edit_obj_props = type.GetProperties(BindingFlags.Instance
                     | BindingFlags.Static
-                    | BindingFlags.Public
-                    | BindingFlags.NonPublic);
+                    | BindingFlags.Public);
         }
 
         public void SetActiveProp(int num)
@@ -223,8 +223,7 @@ namespace Dark_Souls_Builder.Class_Manager
                 type = objects[i].GetType();
                 buf_props = type.GetProperties(BindingFlags.Instance
                         | BindingFlags.Static
-                        | BindingFlags.Public
-                        | BindingFlags.NonPublic);
+                        | BindingFlags.Public);
                 for (int j = 0; j < buf_props.Length; j++)
                     if (ReferenceEquals(buf_props[j].GetValue(objects[i]), objects[edit_obj_num]))
                     {
@@ -240,5 +239,131 @@ namespace Dark_Souls_Builder.Class_Manager
             if (edit_obj_num > 0)
                 edit_obj_num -= 1;
         }
+
+        //--------------------------------------------------------------------------------------------
+
+        public string[] GetSerialisers()//недоработано ю ноу?
+        {
+            string[] result = new string[types.Length];
+            int j = 0;
+            for (int i = 0; i < types.Length; i++)
+            {
+                if (types[i].IsClass && types[i].FullName.Contains("Serializers"))
+                    result[j++] = types[i].Name;
+                //ClassesCB.Items.Add(types[i].Name);
+            }
+            Array.Resize(ref result, j);
+            return result;
+        }
+        //выбираем как сохранять и доставать в зависимости от поля IsTxt (dialog)
+        public void SerialiseJson()
+        {
+            //string MyStr = MyJsonSerializer.SerializeObj(objects[edit_obj_num]);
+            //object MyObj = MyJsonSerializer.DeserializeObj(MyStr, types);
+            int a = 1;
+        }
+
+        private void SaveTxt(string path, string[] text)
+        {
+            using (StreamWriter sw = new StreamWriter(path, false))
+            {
+                for (int i = 0; i < text.Length; i++)
+                    sw.WriteLine(text[i]);
+            }
+        }
+
+        public void Save(string path, string ser_name)
+        {
+            int i = 0;
+            object[] save_objects = DeletExtra();
+            while (types[i].Name != ser_name)
+                i++;
+            if ((bool)types[i].GetField("IsTxt").GetValue(null))
+            {
+                object[] ps = { save_objects };
+                string[] text = (string[])types[i].GetMethod("SerializeArr").Invoke(null, ps);
+                SaveTxt(path, text);
+            }
+            else
+            {
+                object[] ps = { objects, path};
+                types[i].GetMethod("SerializeArr").Invoke(null, ps);
+            }
+        }
+
+        private string[] LoadTxt(string path)
+        {
+            string[] result = new string[0];
+            using (StreamReader sr = new StreamReader(path))
+            {
+                string buf;
+                while((buf = sr.ReadLine()) != null)
+                {
+                    Array.Resize(ref result, result.Length + 1);
+                    result[result.Length - 1] = buf;
+                }    
+            }
+            return result;
+        }
+
+
+        public void Load(string path, string ser_name)
+        {
+            int i = 0;
+            while (types[i].Name != ser_name)
+                i++;
+            if ((bool)types[i].GetField("IsTxt").GetValue(null))
+            {
+                string[] objs_txt = LoadTxt(path);
+                object[] ps = { objs_txt };
+                objects = (object[])types[i].GetMethod("DeserializeArr").Invoke(null, ps);
+            }
+            else
+            {
+                object[] ps = { path };
+                objects = (object[])types[i].GetMethod("DeserializeArr").Invoke(null, ps);
+            }
+        }
+
+        private object[] DeletExtra()
+        {
+            int[] Labels = new int[objects.Length];
+            int size = 0;
+            for (int i = 0; i < objects.Length; i++)
+                Labels[i] = 1;
+            for(int i = 0; i < objects.Length; i++)
+            {
+                PropertyInfo[] props = objects[i].GetType().GetProperties();
+                for(int j = 0; j < props.Length; j++)
+                {
+                    if(props[j].PropertyType.IsClass && props[j].PropertyType.FullName.Contains("User_Classes"))
+                    {
+                        for(int k = 0; k < objects.Length; k++)
+                        {
+                            if (ReferenceEquals(props[j].GetValue(objects[i]), objects[k]))
+                                Labels[k] = -1;
+                        }
+                    }
+                }
+            }
+            for (int i = 0; i < objects.Length; i++)
+                if (Labels[i] > 0)
+                    size++;
+            object[] result = new object[size];
+            int l = 0;
+            for(int i = 0; i < objects.Length; i++)
+            {
+                if(Labels[i] == 1)
+                {
+                    result[l] = objects[i];
+                    l++;
+                }
+            }
+            return result;
+        }
+        /*public void LoadFromTxtFile(string file_name)
+        {
+            using(StreamReader )
+        }*/
     }
 }
