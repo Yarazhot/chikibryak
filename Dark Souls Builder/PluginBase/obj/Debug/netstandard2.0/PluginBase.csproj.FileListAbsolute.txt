@@ -1,0 +1,9 @@
+c:\Users\Dell\source\repos\Dark Souls Builder\PluginBase\obj\Debug\netstandard2.0\PluginBase.csprojAssemblyReference.cache
+c:\Users\Dell\source\repos\Dark Souls Builder\PluginBase\obj\Debug\netstandard2.0\PluginBase.csproj.CoreCompileInputs.cache
+c:\Users\Dell\source\repos\Dark Souls Builder\PluginBase\obj\Debug\netstandard2.0\PluginBase.AssemblyInfoInputs.cache
+c:\Users\Dell\source\repos\Dark Souls Builder\PluginBase\obj\Debug\netstandard2.0\PluginBase.AssemblyInfo.cs
+c:\Users\Dell\source\repos\Dark Souls Builder\PluginBase\bin\Debug\netstandard2.0\PluginBase.deps.json
+c:\Users\Dell\source\repos\Dark Souls Builder\PluginBase\bin\Debug\netstandard2.0\PluginBase.dll
+c:\Users\Dell\source\repos\Dark Souls Builder\PluginBase\bin\Debug\netstandard2.0\PluginBase.pdb
+c:\Users\Dell\source\repos\Dark Souls Builder\PluginBase\obj\Debug\netstandard2.0\PluginBase.dll
+c:\Users\Dell\source\repos\Dark Souls Builder\PluginBase\obj\Debug\netstandard2.0\PluginBase.pdb

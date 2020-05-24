@@ -27,3 +27,7 @@ C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\bin\Debug\Syste
 C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\bin\Debug\System.Text.Json.xml
 C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\bin\Debug\System.ValueTuple.xml
+c:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\bin\Debug\PluginBase.dll
+c:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\bin\Debug\PluginBase.pdb
+C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\bin\Debug\Wiry.Base32.dll
+C:\Users\Dell\source\repos\Dark Souls Builder\Dark Souls Builder\bin\Debug\Wiry.Base32.xml

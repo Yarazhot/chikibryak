@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "csL+MeK1gJu2unzHIdIixsV4GRCeB5xKfWLYzqCm/2XlVD+5miulsWnGBwWYHdqKQ8VuOUbBsAkdIO1apK/Cww==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Dell\\source\\repos\\Dark Souls Builder\\Plugin\\Plugin1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

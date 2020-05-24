@@ -1,0 +1,12 @@
+C:\Users\Dell\source\repos\Dark Souls Builder\Plugin2\bin\Debug\netstandard2.0\Plugin2.deps.json
+C:\Users\Dell\source\repos\Dark Souls Builder\Plugin2\bin\Debug\netstandard2.0\Plugin2.dll
+C:\Users\Dell\source\repos\Dark Souls Builder\Plugin2\obj\Debug\netstandard2.0\Plugin2.AssemblyInfoInputs.cache
+C:\Users\Dell\source\repos\Dark Souls Builder\Plugin2\obj\Debug\netstandard2.0\Plugin2.AssemblyInfo.cs
+C:\Users\Dell\source\repos\Dark Souls Builder\Plugin2\bin\Debug\netstandard2.0\Plugin2.pdb
+C:\Users\Dell\source\repos\Dark Souls Builder\Plugin2\obj\Debug\netstandard2.0\Plugin2.csprojAssemblyReference.cache
+C:\Users\Dell\source\repos\Dark Souls Builder\Plugin2\obj\Debug\netstandard2.0\Plugin2.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\Dark Souls Builder\Plugin2\obj\Debug\netstandard2.0\Plugin2.dll
+C:\Users\Dell\source\repos\Dark Souls Builder\Plugin2\obj\Debug\netstandard2.0\Plugin2.pdb
+C:\Users\Dell\source\repos\Dark Souls Builder\Plugin2\bin\Debug\netstandard2.0\PluginBase.dll
+C:\Users\Dell\source\repos\Dark Souls Builder\Plugin2\bin\Debug\netstandard2.0\PluginBase.pdb
+C:\Users\Dell\source\repos\Dark Souls Builder\Plugin2\obj\Debug\netstandard2.0\Plugin2.csproj.CopyComplete

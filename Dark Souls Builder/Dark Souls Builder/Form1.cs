@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PluginBase;
 using Dark_Souls_Builder.Class_Manager;
 
 
@@ -14,7 +15,8 @@ namespace Dark_Souls_Builder
 {
     public partial class Form1 : Form
     {
-        private Class_Manager.Class__Manager class_manager; 
+        private Class_Manager.Class__Manager class_manager;
+        private Plugin_Manager pm = new Plugin_Manager();
         public Form1()
         {
             InitializeComponent();
@@ -160,6 +162,32 @@ namespace Dark_Souls_Builder
                 return;
             }
             class_manager.Save(SaveFileD.FileName, SerializersCB.Text);
+        }
+
+        private void Form1_DoubleClick(object sender, EventArgs e)
+        {
+            pm.ScanPlugins(AppDomain.CurrentDomain.BaseDirectory + "\\Plugins\\");
+            comboBox1.Items.Clear();
+            foreach (var plugin in pm.Plugins)
+                comboBox1.Items.Add(plugin.Name);
+        }
+
+        private void EncodeBT_Click(object sender, EventArgs e)
+        {
+            if (OpenFileD.ShowDialog() == DialogResult.Cancel)
+                return;
+            foreach (var plugin in pm.Plugins)
+                if (comboBox1.SelectedItem.ToString() == plugin.Name)
+                    plugin.EncodeFile(OpenFileD.FileName);
+        }
+
+        private void DecodeBT_Click(object sender, EventArgs e)
+        {
+            if (OpenFileD.ShowDialog() == DialogResult.Cancel)
+                return;
+            foreach (var plugin in pm.Plugins)
+                if (comboBox1.SelectedItem.ToString() == plugin.Name)
+                    plugin.DecodeFile(OpenFileD.FileName);
         }
     }
 }
